@@ -4,8 +4,7 @@
 //
 //  Created by Yotam Ben-Bassat on 10/15/23.
 //
-
-//testing this out 
+//testing this out
 
 import FirebaseAuth
 import Foundation
