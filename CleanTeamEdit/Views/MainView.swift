@@ -15,7 +15,19 @@ struct MainView: View {
             TabView {
                 TodoListView(userId: viewModel.currentUserId)
                     .tabItem{
-                        Label("Home", systemImage: "house")
+                        Label("To-Do List", systemImage: "list.bullet.clipboard.fill")
+                    }
+                NewItemView()
+                    .tabItem{
+                        Label("New Chore", systemImage:"plus")
+                    }
+                NudgeRepository()
+                    .tabItem{
+                        label("Nudges", systemImage:"message.fill")
+                    }
+                LeaderboardView()
+                    .tabItem{
+                        label("Leaderboard", systemImage:"chart.bar")
                     }
                 ProfileView()
                     .tabItem{
