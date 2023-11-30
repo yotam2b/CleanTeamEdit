@@ -15,7 +15,7 @@ struct MainView: View {
             TabView {
                 TodoListView(userId: viewModel.currentUserId)
                     .tabItem{
-                        Label("Home", systemImage: "house")
+                        Label("House", systemImage: "house")
                     }
                 ProfileView()
                     .tabItem{
