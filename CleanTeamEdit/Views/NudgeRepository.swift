@@ -25,7 +25,7 @@ struct NudgeRepository: View {
                                     .fill(Color.purple) // change to harmony
                                     .frame(width: 50, height: 50)
                                     .overlay(
-                                        Image(systemName: "tortoise.fill") //change to Disappointed Terry Flipped
+                                        Image("DisappointedTerryFlipped") //change to Disappointed Terry Flipped
                                             .resizable()
                                             .aspectRatio(contentMode: .fit)
                                             .frame(width: 50, height: 50)
