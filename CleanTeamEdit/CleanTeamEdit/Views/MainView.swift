@@ -22,10 +22,9 @@ struct MainView: View {
                     .tabItem{
                         Label("Nudges", systemImage:"message.fill")
                     }
-//                LeaderboardView()
-//                    .tabItem{
-//                        Label("Leaderboard", systemImage:"chart.bar")
-//                    }
+                LeaderboardView(leaderData: LeaderData())                    .tabItem{
+                        Label("Leaderboard", systemImage:"chart.bar")
+                    }
                 ProfileView()
                     .tabItem{
                         Label("Profile", systemImage: "person.circle")
