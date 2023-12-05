@@ -12,6 +12,7 @@
 		099CFA0B2B1D0B1800308A66 /* NudgeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099CFA0A2B1D0B1800308A66 /* NudgeRepository.swift */; };
 		099CFA0D2B1D0B6E00308A66 /* NudgeCreationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099CFA0C2B1D0B6E00308A66 /* NudgeCreationView.swift */; };
 		099CFA0F2B1D0BE800308A66 /* NudgeCreationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099CFA0E2B1D0BE800308A66 /* NudgeCreationViewModel.swift */; };
+		09BC16B92B1F9D2F00573223 /* RewardsPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09BC16B82B1F9D2F00573223 /* RewardsPage.swift */; };
 		5543AFF12ADCC39100E0FDF1 /* CleanTeamTodoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5543AFF02ADCC39100E0FDF1 /* CleanTeamTodoApp.swift */; };
 		5543AFF32ADCC39100E0FDF1 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5543AFF22ADCC39100E0FDF1 /* MainView.swift */; };
 		5543AFF52ADCC39200E0FDF1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5543AFF42ADCC39200E0FDF1 /* Assets.xcassets */; };
@@ -47,6 +48,7 @@
 		099CFA0A2B1D0B1800308A66 /* NudgeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NudgeRepository.swift; sourceTree = "<group>"; };
 		099CFA0C2B1D0B6E00308A66 /* NudgeCreationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NudgeCreationView.swift; sourceTree = "<group>"; };
 		099CFA0E2B1D0BE800308A66 /* NudgeCreationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NudgeCreationViewModel.swift; sourceTree = "<group>"; };
+		09BC16B82B1F9D2F00573223 /* RewardsPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardsPage.swift; sourceTree = "<group>"; };
 		5543AFED2ADCC39100E0FDF1 /* CleanTeamEdit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CleanTeamEdit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5543AFF02ADCC39100E0FDF1 /* CleanTeamTodoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CleanTeamTodoApp.swift; sourceTree = "<group>"; };
 		5543AFF22ADCC39100E0FDF1 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -127,6 +129,7 @@
 		5543B0092ADCC7DB00E0FDF1 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				09BC16B82B1F9D2F00573223 /* RewardsPage.swift */,
 				5543AFF22ADCC39100E0FDF1 /* MainView.swift */,
 				049228392B17A0E800CEE9AF /* LeaderboardView.swift */,
 				5543B0112ADCCB9300E0FDF1 /* ProfileView.swift */,
@@ -283,6 +286,7 @@
 				5543B0322ADCEEE400E0FDF1 /* Extensions.swift in Sources */,
 				5543B01A2ADCCBDC00E0FDF1 /* TodoListItemView.swift in Sources */,
 				5543AFF12ADCC39100E0FDF1 /* CleanTeamTodoApp.swift in Sources */,
+				09BC16B92B1F9D2F00573223 /* RewardsPage.swift in Sources */,
 				5543B0142ADCCBA900E0FDF1 /* NewItemView.swift in Sources */,
 				5543B0262ADCCC6900E0FDF1 /* NewItemViewViewModel.swift in Sources */,
 			);

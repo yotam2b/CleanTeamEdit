@@ -7,6 +7,12 @@
 import SwiftUI
 struct LeaderboardView: View {
     @ObservedObject var leaderData: LeaderData
+    @State private var showRewards = false
+    @State private var selectedReward: String = ""
+    @State private var displayMode: DisplayMode = .rewards // Declare displayMode
+      @State private var selectedPunishment: String = "" // Declare selectedPunishment
+      
+    
     var body: some View {
         VStack(spacing: 10) { // Adjust the spacing between elements
             HStack {
@@ -20,9 +26,15 @@ struct LeaderboardView: View {
             
             List(leaderData.leaders.sorted { $0.points > $1.points }) { leader in
                 HStack {
-                    Text(leader.name)
-                    Spacer()
-                    Text("\(leader.points) points")
+                    Image(systemName: leader.imageName)
+                        .foregroundColor(.blue)
+                        .font(.largeTitle)
+                    VStack{
+                        Text(leader.name)
+                        Spacer()
+                        Text("\(leader.points) points")
+                    }
+                    .padding(.top)
                 }
                 GeometryReader { geometry in
                     Rectangle()
@@ -31,28 +43,46 @@ struct LeaderboardView: View {
                 }
             }
             .listRowInsets(EdgeInsets()) // Remove extra padding from List rows
-            VStack(alignment: .leading, spacing: 10) { // Adjust spacing for the text at the bottom
-                Text("This Cycle")
+            
+            VStack(alignment: .leading) {
+                Text("This Cycle Goal")
                     .font(.title)
                 Text("Competing to Reach 200 Points")
                     .font(.title3)
-                Text("Cycle Reward: Free Dinner")
-                    .font(.title3)
-                Text("View More Rewards")
+                Text("Cycle \(displayMode == .rewards ? "Reward" : "Punishment"): \(displayMode == .rewards ? selectedReward : selectedPunishment)")
+                        .font(.title3)
+                
+                
+            }
+            Button(action: {
+                showRewards.toggle()
+            }) {
+                Text("Select Reward/Punishment")
                     .font(.body)
             }
+            .sheet(isPresented: $showRewards) {
+                RewardsPage(selectedReward: $selectedReward, selectedPunishment:$selectedPunishment,displayMode: $displayMode, didSelectReward: { reward in
+                    selectedReward = reward // Update the selected reward
+                },
+                didSelectPunishment: { punishment in selectedPunishment = punishment
+                },
+                didSelectType: { type in
+                    displayMode = type // Update the selected type (reward or punishment)
+                })
+            }
         }
-        .padding(.bottom, 220) // Add bottom padding
     }
+    
     func mapPointsToWidth(points: Int) -> CGFloat {
-        let ratio = CGFloat(points) / CGFloat(200) //<- that number is max points
-        return ratio * UIScreen.main.bounds.width * 0.8 // Adjust multiplier for width scaling
+        let ratio = CGFloat(points) / CGFloat(200)
+        return ratio * UIScreen.main.bounds.width * 0.8
+    }
+    
+    
+    struct LeaderboardView_Previews: PreviewProvider {
+        static var previews: some View {
+            LeaderboardView(leaderData: LeaderData())
+        }
     }
 }
-             struct LeaderboardView_Previews: PreviewProvider {
-                 static var previews: some View {
-                     LeaderboardView(leaderData: LeaderData())
-                 }
-             }
-
 
