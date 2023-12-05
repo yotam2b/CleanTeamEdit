@@ -62,43 +62,51 @@ struct RewardsPage: View {
                 .padding()
                 List {
                     if displayMode == .rewards {
+                        Text("Select a reward for this cycle's winner.")
+                            .fontWeight(.thin)
                         ForEach($rewards) { $reward in
                             RewardRow(reward: $reward,rewards: $rewards, selectedReward: $selectedReward, didSelectReward: didSelectReward)
                         }
-                        Text("Create a new reward for this cycle's winner.")
-                            .fontWeight(.thin)
-                        
-                        HStack{
-                            TextField("New Reward", text: $newRewardText)
-                                .textFieldStyle(RoundedBorderTextFieldStyle())
-                                .padding()
-                            Button(action: {
-                                addNewReward()
-                            }) {
-                                Text("Add New")
-                                    .font(.body)
-                                    .foregroundColor(.blue)
-                                
+                        VStack(alignment:.leading){
+                            Text("Create a new reward.")
+                                .fontWeight(.thin)
+                            
+                            HStack{
+                                TextField("New Reward", text: $newRewardText)
+                                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                                    .padding()
+                                Button(action: {
+                                    addNewReward()
+                                }) {
+                                    Text("Add New")
+                                        .font(.body)
+                                        .foregroundColor(.blue)
+                                    
+                                }
                             }
                         }
                         
                     } else {
+                        Text("Select a punishment for this cycle's loser.")
+                            .fontWeight(.thin)
                         ForEach($punishments) { $punishment in
                     PunishmentRow(punishment: $punishment, punishments: $punishments,selectedPunishment: $selectedPunishment, didSelectPunishment: didSelectPunishment)
                         }
-                        Text("Create a new punishment for this cycle's loser.")
-                            .fontWeight(.thin)
-                        HStack{
-                            TextField("New Punishment", text: $newPunishmentText)
-                                .textFieldStyle(RoundedBorderTextFieldStyle())
-                                .padding()
-                            Button(action: {
-                                addNewPunishment()
-                            }) {
-                                Text("Add New")
-                                    .font(.body)
-                                    .foregroundColor(.blue)
-                                
+                        VStack(alignment: .leading){
+                            Text("Create a new punishment.")
+                                .fontWeight(.thin)
+                            HStack{
+                                TextField("New Punishment", text: $newPunishmentText)
+                                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                                    .padding()
+                                Button(action: {
+                                    addNewPunishment()
+                                }) {
+                                    Text("Add New")
+                                        .font(.body)
+                                        .foregroundColor(.blue)
+                                    
+                                }
                             }
                         }
                         
