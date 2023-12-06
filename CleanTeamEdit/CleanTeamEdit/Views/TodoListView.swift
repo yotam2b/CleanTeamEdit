@@ -52,9 +52,6 @@ struct TodoListView: View {
                     }
                     .listStyle(PlainListStyle())
                 }
-                .frame(maxWidth: 350)
-                .background(RoundedRectangle(cornerRadius: 12)
-                                            .fill(Color.gray.opacity(0.1)))
             }
             .navigationTitle("CleanTeam Todo")
             .toolbar {
