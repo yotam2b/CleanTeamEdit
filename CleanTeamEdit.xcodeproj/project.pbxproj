@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		049228382B17A0B600CEE9AF /* LeaderboardData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049228372B17A0B600CEE9AF /* LeaderboardData.swift */; };
 		0492283A2B17A0E800CEE9AF /* LeaderboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049228392B17A0E800CEE9AF /* LeaderboardView.swift */; };
+		099CFA0B2B1D0B1800308A66 /* NudgeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099CFA0A2B1D0B1800308A66 /* NudgeRepository.swift */; };
+		099CFA0D2B1D0B6E00308A66 /* NudgeCreationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099CFA0C2B1D0B6E00308A66 /* NudgeCreationView.swift */; };
+		099CFA0F2B1D0BE800308A66 /* NudgeCreationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099CFA0E2B1D0BE800308A66 /* NudgeCreationViewModel.swift */; };
+		09BC16B92B1F9D2F00573223 /* RewardsPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09BC16B82B1F9D2F00573223 /* RewardsPage.swift */; };
 		5543AFF12ADCC39100E0FDF1 /* CleanTeamTodoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5543AFF02ADCC39100E0FDF1 /* CleanTeamTodoApp.swift */; };
 		5543AFF32ADCC39100E0FDF1 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5543AFF22ADCC39100E0FDF1 /* MainView.swift */; };
 		5543AFF52ADCC39200E0FDF1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5543AFF42ADCC39200E0FDF1 /* Assets.xcassets */; };
@@ -41,6 +45,10 @@
 /* Begin PBXFileReference section */
 		049228372B17A0B600CEE9AF /* LeaderboardData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LeaderboardData.swift; path = CleanTeamEdit/Other/LeaderboardData.swift; sourceTree = SOURCE_ROOT; };
 		049228392B17A0E800CEE9AF /* LeaderboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardView.swift; sourceTree = "<group>"; };
+		099CFA0A2B1D0B1800308A66 /* NudgeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NudgeRepository.swift; sourceTree = "<group>"; };
+		099CFA0C2B1D0B6E00308A66 /* NudgeCreationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NudgeCreationView.swift; sourceTree = "<group>"; };
+		099CFA0E2B1D0BE800308A66 /* NudgeCreationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NudgeCreationViewModel.swift; sourceTree = "<group>"; };
+		09BC16B82B1F9D2F00573223 /* RewardsPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardsPage.swift; sourceTree = "<group>"; };
 		5543AFED2ADCC39100E0FDF1 /* CleanTeamEdit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CleanTeamEdit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5543AFF02ADCC39100E0FDF1 /* CleanTeamTodoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CleanTeamTodoApp.swift; sourceTree = "<group>"; };
 		5543AFF22ADCC39100E0FDF1 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -121,14 +129,18 @@
 		5543B0092ADCC7DB00E0FDF1 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				09BC16B82B1F9D2F00573223 /* RewardsPage.swift */,
 				5543AFF22ADCC39100E0FDF1 /* MainView.swift */,
+				049228392B17A0E800CEE9AF /* LeaderboardView.swift */,
 				5543B0112ADCCB9300E0FDF1 /* ProfileView.swift */,
 				5543B00F2ADCCB8000E0FDF1 /* TodoListView.swift */,
 				5543B0132ADCCBA900E0FDF1 /* NewItemView.swift */,
 				5543B0152ADCCBB200E0FDF1 /* LoginView.swift */,
 				5543B02F2ADCD80D00E0FDF1 /* CTButton.swift */,
+				099CFA0A2B1D0B1800308A66 /* NudgeRepository.swift */,
 				5543B02D2ADCCED300E0FDF1 /* HeaderView.swift */,
 				5543B0172ADCCBBA00E0FDF1 /* RegisterView.swift */,
+				099CFA0C2B1D0B6E00308A66 /* NudgeCreationView.swift */,
 				5543B0192ADCCBDC00E0FDF1 /* TodoListItemView.swift */,
 			);
 			path = Views;
@@ -138,10 +150,10 @@
 			isa = PBXGroup;
 			children = (
 				5543B01F2ADCCC3C00E0FDF1 /* MainViewViewModel.swift */,
-				049228392B17A0E800CEE9AF /* LeaderboardView.swift */,
 				5543B0212ADCCC4A00E0FDF1 /* ProfileViewViewModel.swift */,
 				5543B0252ADCCC6900E0FDF1 /* NewItemViewViewModel.swift */,
 				5543B0272ADCCC7200E0FDF1 /* LoginViewViewModel.swift */,
+				099CFA0E2B1D0BE800308A66 /* NudgeCreationViewModel.swift */,
 				5543B0292ADCCC7C00E0FDF1 /* RegisterViewViewModel.swift */,
 				5543B0232ADCCC5B00E0FDF1 /* TodoListViewViewModel.swift */,
 				5543B02B2ADCCC8600E0FDF1 /* TodoListItemViewViewModel.swift */,
@@ -256,8 +268,10 @@
 				0492283A2B17A0E800CEE9AF /* LeaderboardView.swift in Sources */,
 				049228382B17A0B600CEE9AF /* LeaderboardData.swift in Sources */,
 				5543B02C2ADCCC8600E0FDF1 /* TodoListItemViewViewModel.swift in Sources */,
+				099CFA0D2B1D0B6E00308A66 /* NudgeCreationView.swift in Sources */,
 				5543B0162ADCCBB200E0FDF1 /* LoginView.swift in Sources */,
 				5543B0302ADCD80E00E0FDF1 /* CTButton.swift in Sources */,
+				099CFA0F2B1D0BE800308A66 /* NudgeCreationViewModel.swift in Sources */,
 				5543B02A2ADCCC7C00E0FDF1 /* RegisterViewViewModel.swift in Sources */,
 				5543B0202ADCCC3C00E0FDF1 /* MainViewViewModel.swift in Sources */,
 				5543B0122ADCCB9400E0FDF1 /* ProfileView.swift in Sources */,
@@ -267,10 +281,12 @@
 				5543B0102ADCCB8000E0FDF1 /* TodoListView.swift in Sources */,
 				5543B0242ADCCC5B00E0FDF1 /* TodoListViewViewModel.swift in Sources */,
 				5543B01C2ADCCC1500E0FDF1 /* User.swift in Sources */,
+				099CFA0B2B1D0B1800308A66 /* NudgeRepository.swift in Sources */,
 				5543B0282ADCCC7200E0FDF1 /* LoginViewViewModel.swift in Sources */,
 				5543B0322ADCEEE400E0FDF1 /* Extensions.swift in Sources */,
 				5543B01A2ADCCBDC00E0FDF1 /* TodoListItemView.swift in Sources */,
 				5543AFF12ADCC39100E0FDF1 /* CleanTeamTodoApp.swift in Sources */,
+				09BC16B92B1F9D2F00573223 /* RewardsPage.swift in Sources */,
 				5543B0142ADCCBA900E0FDF1 /* NewItemView.swift in Sources */,
 				5543B0262ADCCC6900E0FDF1 /* NewItemViewViewModel.swift in Sources */,
 			);
@@ -479,8 +495,9 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 9.0.0;
+				kind = versionRange;
+				maximumVersion = 11.0.0;
+				minimumVersion = 10.0.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
